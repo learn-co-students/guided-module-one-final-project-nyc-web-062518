@@ -8,18 +8,19 @@ class Movie < ActiveRecord::Base
     def cast
       puts "#{self.title} cast:"
       self.characters.each do |character|
-      puts "#{character.name} was portrayed by #{character.actor.name}."
+      puts "#{character.name} was portrayed by:"
+      puts "#{character.actor.name}."
       end
     end
 
     def movie_details
       input=STDIN.gets.chomp
       if input == "1"
-        "#{self.title} was directed by #{self.director}"
+        "#{self.title} was directed by #{self.director.name}"
       elsif input == "2"
         "#{self.title} made #{self.box_office}."
       elsif input == "3"
         cast
-      end 
+      end
     end
 end

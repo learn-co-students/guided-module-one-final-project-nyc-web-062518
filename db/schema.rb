@@ -21,12 +21,11 @@ ActiveRecord::Schema.define(version: 20180710150455) do
   create_table "characters", force: :cascade do |t|
     t.string  "name"
     t.integer "actor_id"
-    t.string  "catch_phrase"
   end
 
   create_table "directors", force: :cascade do |t|
     t.string  "name"
-    t.boolean "oscar_winner?"
+    t.boolean "oscar_winner"
   end
 
   create_table "movie_actors", force: :cascade do |t|

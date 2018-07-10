@@ -25,18 +25,18 @@ jeff_goldblum = Actor.create(name:"Jeff Goldblum")
 laura_dern = Actor.create(name:"Laura Dern")
 sam_neill = Actor.create(name:"Sam Neill")
 
-luke_skywalker = Character.create(name:"Luke Skywalker")
-han_solo = Character.create(name:"Han Solo")
-princess_leia = Character.create(name:"Princess Leia")
-marty = Character.create(name:"Marty")
-doc = Character.create(name:"Doc")
-delbert = Character.create(name:"Delbert McClintock")
-ross = Character.create(name: "Ross Jennings")
-martin = Character.create(name: "Martin Brody")
-quint = Character.create(name: "Quint")
+luke_skywalker = Character.create(name:"Luke Skywalker", actor: mark_hamill)
+han_solo = Character.create(name:"Han Solo", actor: harrison_ford)
+princess_leia = Character.create(name:"Princess Leia", actor: carrie_fisher)
+marty = Character.create(name:"Marty", actor: michael_j_fox)
+doc = Character.create(name:"Doc", actor: christopher_lloyd)
+delbert = Character.create(name:"Delbert McClintock", actor: john_goodman)
+ross = Character.create(name: "Ross Jennings", actor: jeff_daniels)
+martin = Character.create(name: "Martin Brody", actor: roy_scheider)
+quint = Character.create(name: "Quint", actor: robert_shaw)
 ian = Character.create(name:"Ian Malcolm", actor: jeff_goldblum)
-ellie = Character.create(name:"Ellie Sattler")
-alan = Character.create(name:"Alan Grant")
+ellie = Character.create(name:"Ellie Sattler", actor: laura_dern)
+alan = Character.create(name:"Alan Grant", actor: sam_neill)
 
 MovieCharacter.create(movie: jurassic_park, character: ian)
 MovieCharacter.create(movie: jurassic_park, character: ellie)
@@ -80,20 +80,21 @@ MovieActor.create(movie: jaws, actor: robert_shaw)
 MovieActor.create(movie: arachnophobia, actor: jeff_daniels)
 MovieActor.create(movie: arachnophobia, actor: john_goodman)
 
-luke_skywalker.actor = mark_hamill
-han_solo.actor = harrison_ford
-princess_leia.actor = carrie_fisher
-marty.actor = michael_j_fox
-doc.actor = christopher_lloyd
-delbert.actor = john_goodman
-ross.actor = jeff_daniels
-martin.actor = roy_scheider
-quint.actor = robert_shaw
-ian.actor = jeff_goldblum
-ellie.actor = laura_dern
-alan.actor = sam_neill
+# luke_skywalker.actor = mark_hamill
+# han_solo.actor = harrison_ford
+# princess_leia.actor = carrie_fisher
+# marty.actor = michael_j_fox
+# doc.actor = christopher_lloyd
+# delbert.actor = john_goodman
+# ross.actor = jeff_daniels
+# martin.actor = roy_scheider
+# quint.actor = robert_shaw
+# ian.actor = jeff_goldblum
+# ellie.actor = laura_dern
+# alan.actor = sam_neill
 
 jurassic_park.director = steven_spielberg
+jurassic_park.save
 a_new_hope.director = george_lucas
 return_of_the_jedi.director = george_lucas
 empire_strikes_back.director = george_lucas
@@ -101,3 +102,43 @@ back_to_the_future.director = robert_zemeckis
 back_to_the_future_2.director = robert_zemeckis
 jaws.director = steven_spielberg
 arachnophobia.director = frank_marshall
+
+mark_hamill.paygrade = 2
+harrison_ford.paygrade = 1
+carrie_fisher.paygrade = 2
+michael_j_fox.paygrade = 3
+christopher_lloyd.paygrade = 3
+john_goodman.paygrade = 2
+jeff_daniels.paygrade = 3
+roy_scheider.paygrade = 3
+robert_shaw.paygrade = 1
+jeff_goldblum.paygrade = 1
+laura_dern.paygrade = 2
+sam_neill.paygrade = 3
+
+mark_hamill.a_list = true
+harrison_ford.a_list = true
+carrie_fisher.a_list = true
+michael_j_fox.a_list = true
+christopher_lloyd.a_list = false
+john_goodman.a_list = true
+jeff_daniels.a_list = false
+roy_scheider.a_list = false
+robert_shaw.a_list = false
+jeff_goldblum.a_list = true
+laura_dern.a_list = false
+sam_neill.a_list = false
+
+steven_spielberg.oscar_winner = true
+george_lucas.oscar_winner = true
+robert_zemeckis.oscar_winner = true
+frank_marshall.oscar_winner = false
+
+jurassic_park.box_office = 100000000
+a_new_hope.box_office = 30000000
+empire_strikes_back.box_office = 40000000
+return_of_the_jedi.box_office = 50000000
+back_to_the_future.box_office = 24000000
+back_to_the_future_2.box_office = 35000000
+jaws.box_office = 42000000
+arachnophobia.box_office = 15000000
