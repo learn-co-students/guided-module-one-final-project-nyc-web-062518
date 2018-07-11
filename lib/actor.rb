@@ -14,7 +14,8 @@ class Actor < ActiveRecord::Base
     puts "#{self.name} has worked with:"
     directors = []
     self.movies.each do |movie|
-      directors << movie.director.name
+      #binding.pry
+      directors << movie.director
     end
     directors.uniq.each do |director|
       puts director.name
@@ -26,6 +27,16 @@ class Actor < ActiveRecord::Base
       self.characters.each do |character|
         puts character.name
       end
+  end
+
+  def actor_details(choice)
+    if choice == "1"
+      self.actor_movies
+    elsif choice == "2"
+      self.actor_directors
+    elsif choice == "3"
+      self.actor_characters
+    end
   end
 
 

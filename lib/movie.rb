@@ -13,12 +13,12 @@ class Movie < ActiveRecord::Base
       end
     end
 
-    def movie_details
-      input=STDIN.gets.chomp
+    def movie_details(input)
+      #input=STDIN.gets.chomp
       if input == "1"
-        "#{self.title} was directed by #{self.director.name}"
+        puts "#{self.title} was directed by #{self.director.name}"
       elsif input == "2"
-        "#{self.title} made #{self.box_office}."
+        puts "#{self.title} made $#{self.box_office}."
       elsif input == "3"
         cast
       end

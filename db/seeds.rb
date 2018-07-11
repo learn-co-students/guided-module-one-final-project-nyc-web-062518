@@ -1,3 +1,11 @@
+require 'pry'
+
+
+steven_spielberg = Director.create(name:"Steven Spielberg")
+george_lucas = Director.create(name:"George Lucas")
+robert_zemeckis = Director.create(name:"Robert Zemeckis")
+frank_marshall = Director.create(name:"Frank Marshall")
+
 jurassic_park = Movie.create(title:"Jurassic Park")
 a_new_hope = Movie.create(title:"Star Wars: A New Hope")
 empire_strikes_back = Movie.create(title:"Star Wars: The Empire Strikes Back")
@@ -6,11 +14,6 @@ back_to_the_future = Movie.create(title:"Back to the Future")
 back_to_the_future_2 = Movie.create(title:"Back to the Future 2")
 jaws = Movie.create(title:"Jaws")
 arachnophobia = Movie.create(title:"Arachnophobia")
-
-steven_spielberg = Director.create(name:"Steven Spielberg")
-george_lucas = Director.create(name:"George Lucas")
-robert_zemeckis = Director.create(name:"Robert Zemeckis")
-frank_marshall = Director.create(name:"Frank Marshall")
 
 michael_j_fox = Actor.create(name:"Michael J Fox")
 carrie_fisher = Actor.create(name:"Carrie Fisher")
@@ -24,6 +27,56 @@ jeff_daniels = Actor.create(name:"Jeff Daniels")
 jeff_goldblum = Actor.create(name:"Jeff Goldblum")
 laura_dern = Actor.create(name:"Laura Dern")
 sam_neill = Actor.create(name:"Sam Neill")
+
+mark_hamill.paygrade = 2
+mark_hamill.save
+harrison_ford.paygrade = 1
+harrison_ford.save
+carrie_fisher.paygrade = 2
+carrie_fisher.save
+michael_j_fox.paygrade = 3
+michael_j_fox.save
+christopher_lloyd.paygrade = 3
+christopher_lloyd.save
+john_goodman.paygrade = 2
+john_goodman.save
+jeff_daniels.paygrade = 3
+jeff_daniels.save
+roy_scheider.paygrade = 3
+roy_scheider.save
+robert_shaw.paygrade = 1
+robert_shaw.save
+jeff_goldblum.paygrade = 1
+jeff_goldblum.save
+laura_dern.paygrade = 2
+laura_dern.save
+sam_neill.paygrade = 3
+sam_neill.save
+
+mark_hamill.a_list = true
+mark_hamill.save
+harrison_ford.a_list = true
+harrison_ford.save
+carrie_fisher.a_list = true
+carrie_fisher.save
+michael_j_fox.a_list = true
+michael_j_fox.save
+christopher_lloyd.a_list = false
+christopher_lloyd.save
+john_goodman.a_list = true
+john_goodman.save
+jeff_daniels.a_list = false
+jeff_daniels.save
+roy_scheider.a_list = false
+roy_scheider.save
+robert_shaw.a_list = false
+robert_shaw.save
+jeff_goldblum.a_list = true
+jeff_goldblum.save
+laura_dern.a_list = false
+laura_dern.save
+sam_neill.a_list = false
+sam_neill.save
 
 luke_skywalker = Character.create(name:"Luke Skywalker", actor: mark_hamill)
 han_solo = Character.create(name:"Han Solo", actor: harrison_ford)
@@ -96,49 +149,44 @@ MovieActor.create(movie: arachnophobia, actor: john_goodman)
 jurassic_park.director = steven_spielberg
 jurassic_park.save
 a_new_hope.director = george_lucas
+a_new_hope.save
 return_of_the_jedi.director = george_lucas
+return_of_the_jedi.save
 empire_strikes_back.director = george_lucas
+empire_strikes_back.save
 back_to_the_future.director = robert_zemeckis
+back_to_the_future.save
 back_to_the_future_2.director = robert_zemeckis
+back_to_the_future_2.save
 jaws.director = steven_spielberg
+jaws.save
 arachnophobia.director = frank_marshall
+arachnophobia.save
 
-mark_hamill.paygrade = 2
-harrison_ford.paygrade = 1
-carrie_fisher.paygrade = 2
-michael_j_fox.paygrade = 3
-christopher_lloyd.paygrade = 3
-john_goodman.paygrade = 2
-jeff_daniels.paygrade = 3
-roy_scheider.paygrade = 3
-robert_shaw.paygrade = 1
-jeff_goldblum.paygrade = 1
-laura_dern.paygrade = 2
-sam_neill.paygrade = 3
 
-mark_hamill.a_list = true
-harrison_ford.a_list = true
-carrie_fisher.a_list = true
-michael_j_fox.a_list = true
-christopher_lloyd.a_list = false
-john_goodman.a_list = true
-jeff_daniels.a_list = false
-roy_scheider.a_list = false
-robert_shaw.a_list = false
-jeff_goldblum.a_list = true
-laura_dern.a_list = false
-sam_neill.a_list = false
 
 steven_spielberg.oscar_winner = true
+steven_spielberg.save
 george_lucas.oscar_winner = true
+george_lucas.save
 robert_zemeckis.oscar_winner = true
+robert_zemeckis.save
 frank_marshall.oscar_winner = false
+frank_marshall.save
 
 jurassic_park.box_office = 100000000
+jurassic_park.save
 a_new_hope.box_office = 30000000
+a_new_hope.save
 empire_strikes_back.box_office = 40000000
+empire_strikes_back.save
 return_of_the_jedi.box_office = 50000000
+return_of_the_jedi.save
 back_to_the_future.box_office = 24000000
+back_to_the_future.save
 back_to_the_future_2.box_office = 35000000
+back_to_the_future_2.save
 jaws.box_office = 42000000
+jaws.save
 arachnophobia.box_office = 15000000
+arachnophobia.save
