@@ -118,17 +118,6 @@ class CLIapp
       return_to_menu(choice)
       director.director_details(choice)
     end
-    # if input == "menu"
-    #   welcome_message
-    # else
-    #   director = Director.where("name LIKE ?", "%#{input}%")[0]
-    #   puts "1. What movies has this director made?"
-    #   puts "2. What is this director's total box office?"
-    #   puts "3. What actors has this director worked with?"
-    #   puts "4. Has this director won an Academy Award?"
-    #   choice = STDIN.gets.chomp
-    #   director.director_details(choice)
-    # end
   end
 
   def return_to_menu(input)
