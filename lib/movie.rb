@@ -6,19 +6,19 @@ class Movie < ActiveRecord::Base
     has_many :actors, through: :movie_actors
 
     def cast
-      puts "#{self.title} cast:"
+      puts "#{self.title} cast:".colorize(:red)
       self.characters.each do |character|
-      puts "#{character.name} was portrayed by:"
-      puts "#{character.actor.name}."
+      puts "#{character.name} was portrayed by:".colorize(:red)
+      puts "#{character.actor.name}.".colorize(:red)
       end
     end
 
     def movie_details(input)
       #input=STDIN.gets.chomp
       if input == "1"
-        puts "#{self.title} was directed by #{self.director.name}"
+        puts "#{self.title} was directed by #{self.director.name}".colorize(:red)
       elsif input == "2"
-        puts "#{self.title} made $#{self.box_office}."
+        puts "#{self.title} made $#{self.box_office}.".colorize(:red)
       elsif input == "3"
         cast
       end

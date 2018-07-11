@@ -29,7 +29,7 @@ class Director < ActiveRecord::Base
     self.movies.each do |movie|
       total += movie.box_office
     end
-    puts "#{self.name}\'s movies have earned $#{total}"
+    puts "#{self.name}\'s movies have earned $#{total}".colorize(:red)
   end
 
   def director_details(input)
@@ -42,7 +42,7 @@ class Director < ActiveRecord::Base
     elsif input == "4"
       self.oscar
     else
-      puts "Enter valid choice by number."
+      puts "Enter valid choice by number.".colorize(:red)
     end
   end
 end

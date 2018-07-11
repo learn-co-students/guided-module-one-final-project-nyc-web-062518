@@ -4,28 +4,28 @@ class Actor < ActiveRecord::Base
   has_many :characters
 
   def actor_movies
-    puts "#{self.name} has appeared in:"
+    puts "#{self.name} has appeared in:".colorize(:red)
     self.movies.each do |movie|
-      puts movie.title
+      puts movie.title.colorize(:red)
     end
   end
 
   def actor_directors
-    puts "#{self.name} has worked with:"
+    puts "#{self.name} has worked with:".colorize(:red)
     directors = []
     self.movies.each do |movie|
       #binding.pry
       directors << movie.director
     end
     directors.uniq.each do |director|
-      puts director.name
+      puts director.name.colorize(:red)
     end
   end
 
   def actor_characters
-    puts "#{self.name} has portrayed the following characters:"
+    puts "#{self.name} has portrayed the following characters:".colorize(:red)
       self.characters.each do |character|
-        puts character.name
+        puts character.name.colorize(:red)
       end
   end
 
