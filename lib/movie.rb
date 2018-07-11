@@ -21,6 +21,8 @@ class Movie < ActiveRecord::Base
         puts "#{self.title} made $#{self.box_office}.".colorize(:red)
       elsif input == "3"
         cast
+      elsif input == "4"
+        Launchy.open(self.trailer)
       end
     end
 end

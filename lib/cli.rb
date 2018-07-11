@@ -1,15 +1,8 @@
 class CLIapp
-  def return_menu
 
-    welcome_message
-    movie_search
-    actor_search
-
-  end
 
   def welcome_message
-    binding.pry
-    puts artii 'Welcome!'.colorize(:blue)
+    puts 'Welcome to the Movie Database!'.colorize(:blue)
     puts "In this database, you can search for:".colorize(:blue)
     puts "1. Movies".colorize(:blue)
     puts "2. Actors".colorize(:blue)
@@ -52,6 +45,7 @@ class CLIapp
         puts "1. Who directed this movie?".colorize(:blue)
         puts "2. What was this movie's box office?".colorize(:blue)
         puts "3. What was this movie's cast?".colorize(:blue)
+        puts "4. Watch this movie's trailer".colorize(:blue)
         puts "Please select a query by number.".colorize(:blue)
         puts "Type menu to return to the menu.".colorize(:blue)
         input = STDIN.gets.chomp
