@@ -15,7 +15,7 @@ class CLIapp
   end
 
   def welcome_message
-
+    system "clear"
     puts 'Welcome to the Movie Database!'.colorize(:blue)
     input = main_menu
     process_input(input)
