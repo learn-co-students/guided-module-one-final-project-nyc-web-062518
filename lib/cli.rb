@@ -2,6 +2,12 @@
 class CLIapp
 
   def main_menu
+    puts"  ____    __    ____  _______  __        ______   ______   .___  ___.  _______
+  \\   \\  /  \\  /   / |   ____||  |      /      | /  __  \\  |   \\/   | |   ____|
+   \\   \\/    \\/   /  |  |__   |  |     |  ,----'|  |  |  | |  \\  /  | |  |__
+    \\            /   |   __|  |  |     |  |     |  |  |  | |  |\\/|  | |   __|
+     \\    /\\    /    |  |____ |  `----.|  `----.|  `--'  | |  |  |  | |  |____
+      \\__/  \\__/     |_______||_______| \\______| \\______/  |__|  |__| |_______|"
     prompt = TTY::Prompt.new
     choices = ["1. Movies", "2. Actors", "3. Characters", "4. Directors"]
     user_input = prompt.select("What would you like to search for?", choices)
@@ -9,7 +15,7 @@ class CLIapp
   end
 
   def welcome_message
-  
+
     puts 'Welcome to the Movie Database!'.colorize(:blue)
     input = main_menu
     process_input(input)
@@ -34,6 +40,12 @@ class CLIapp
   end
 
   def movie_search
+    puts "  .___  ___.   ______   ____    ____  __   _______
+  |   \\/   |  /  __  \\  \\   \\  /   / |  | |   ____|
+  |  \\  /  | |  |  |  |  \\   \\/   /  |  | |  |__
+  |  |\\/|  | |  |  |  |   \\      /   |  | |   __|
+  |  |  |  | |  `--'  |    \\    /    |  | |  |____
+  |__|  |__|  \\______/      \\__/     |__| |_______|"
     prompt = TTY::Prompt.new
     choices = ["1. Jurassic Park", "2. Star Wars: A New Hope", "3. Star Wars: The Empire Strikes Back", "4. Star Wars: Return of the Jedi", "5. Back to the Future", "6. Back to the Future 2", "7. Jaws", "8. Arachnophobia"]
     user_input = prompt.select("What movie would you like to know more about?", choices)
@@ -54,6 +66,12 @@ class CLIapp
   end
 
   def actor_search
+    puts "       ___        ______ .___________.  ______   .______
+      /   \\      /      ||           | /  __  \\  |   _  \\
+     /  ^  \\    |  ,----'`---|  |----`|  |  |  | |  |_)  |
+    /  /_\\  \\   |  |         |  |     |  |  |  | |      /
+   /  _____  \\  |  `----.    |  |     |  `--'  | |  |\\  \\----.
+  /__/     \\__\\  \\______|    |__|      \\______/  | _| `._____|"
     prompt = TTY::Prompt.new
     choices = ["1. Michael J Fox", "2. Carrie Fisher", "3. Harrison Ford", "4. Mark Hamill", "5. Christopher Lloyd",
     "6. Roy Scheider", "7. Robert Shaw", "8. John Goodman", "9. Jeff Daniels", "10. Jeff Goldblum",
@@ -76,6 +94,13 @@ class CLIapp
   end
 
   def character_search
+
+puts "    ______  __    __  .______
+   /      ||  |  |  | |   _  \\
+  |  ,----'|  |__|  | |  |_)  |
+  |  |     |   __   | |      /
+  |  `----.|  |  |  | |  |\\  \\----.
+   \\______||__|  |__| | _| `._____|"
     prompt = TTY::Prompt.new
     choices = ["1. Luke Skywalker", "2. Han Solo", "3. Princess Leia", "4. Marty", "5. Doc",
       "6. Delbert McClintock", "7.Ross Jennings", "8. Martin Brody", "9. Quint", "10. Ian Malcolm",
@@ -88,23 +113,6 @@ class CLIapp
       input = character_detail_select
       character.character_details(input)
     end
-    # puts "Please enter the name of a character you'd like to search for.".colorize(:blue)
-    # input = STDIN.gets.chomp
-    #
-    # return_to_menu(input)
-    # character = Character.where("name LIKE ?", "%#{input}%")[0]
-    #
-    # while input != "menu"
-    #   puts "What would you like to know?".colorize(:blue)
-    #   puts "1. What movies did this character appear in?".colorize(:blue)
-    #   puts "2. Who portrayed this character?".colorize(:blue)
-    #   puts "3. Watch a scene with this character.".colorize(:blue)
-    #   puts "Please select a query by number.".colorize(:blue)
-    #   puts "Type menu to return to the menu.".colorize(:blue)
-    #   choice = STDIN.gets.chomp
-    #   return_to_menu(choice)
-    #   character.character_details(choice)
-    # end
   end
 
   def character_detail_select
@@ -116,6 +124,13 @@ class CLIapp
   end
 
   def director_search
+    puts "
+   _______   __  .______
+  |       \\ |  | |   _  \\
+  |  .--.  ||  | |  |_)  |
+  |  |  |  ||  | |      /
+  |  '--'  ||  | |  |\\  \\----.
+  |_______/ |__| | _| `._____|"
     prompt = TTY::Prompt.new
     choices = ["1. Steven Spielberg", "2. Frank Marshall", "3. George Lucas", "4. Robert Zemeckis"]
     user_input = prompt.select("What director would you like to know more about?", choices)
