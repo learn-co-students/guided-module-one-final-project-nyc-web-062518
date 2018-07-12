@@ -4,6 +4,7 @@ class CreateActors < ActiveRecord::Migration[5.0]
       t.string :name
       t.boolean :a_list
       t.integer :paygrade
+      t.string :wikipedia
     end
   end
 end

@@ -29,6 +29,10 @@ class Actor < ActiveRecord::Base
       end
   end
 
+  def actor_wikipedia
+    Launchy.open(self.wikipedia)
+  end
+
   def actor_details(choice)
     if choice == "1"
       self.actor_movies
@@ -36,6 +40,8 @@ class Actor < ActiveRecord::Base
       self.actor_directors
     elsif choice == "3"
       self.actor_characters
+    elsif choice == "4"
+      self.actor_wikipedia
     end
   end
 

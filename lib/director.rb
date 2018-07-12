@@ -32,6 +32,10 @@ class Director < ActiveRecord::Base
     puts "#{self.name}\'s movies have earned $#{total}".colorize(:red)
   end
 
+  def open_interview
+    Launchy.open(self.interview)
+  end
+
   def director_details(input)
     if input == "1"
       self.director_movies
@@ -41,6 +45,8 @@ class Director < ActiveRecord::Base
       self.director_actors
     elsif input == "4"
       self.oscar
+    elsif input == "5"
+      self.open_interview
     else
       puts "Enter valid choice by number.".colorize(:red)
     end

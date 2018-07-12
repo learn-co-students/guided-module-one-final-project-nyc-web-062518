@@ -67,6 +67,7 @@ class CLIapp
       puts "1. What movies has this actor been in?".colorize(:blue)
       puts "2. What directors has this actor worked with?".colorize(:blue)
       puts "3. What characters has this actor portrayed?".colorize(:blue)
+      puts "4. Open this actor's Wikipedia page.".colorize(:blue)
       puts "Please select a query by number.".colorize(:blue)
       puts "Type menu to return to the menu.".colorize(:blue)
       choice = STDIN.gets.chomp
@@ -86,6 +87,7 @@ class CLIapp
       puts "What would you like to know?".colorize(:blue)
       puts "1. What movies did this character appear in?".colorize(:blue)
       puts "2. Who portrayed this character?".colorize(:blue)
+      puts "3. Watch a scene with this character.".colorize(:blue)
       puts "Please select a query by number.".colorize(:blue)
       puts "Type menu to return to the menu.".colorize(:blue)
       choice = STDIN.gets.chomp
@@ -107,6 +109,7 @@ class CLIapp
       puts "2. What is this director's total box office?".colorize(:blue)
       puts "3. What actors has this director worked with?".colorize(:blue)
       puts "4. Has this director won an Academy Award?".colorize(:blue)
+      puts "5. Watch an interview with this director.".colorize(:blue)
       puts "Please select a query by number.".colorize(:blue)
       puts "Type menu to return to the menu.".colorize(:blue)
       choice = STDIN.gets.chomp

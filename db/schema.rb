@@ -16,16 +16,19 @@ ActiveRecord::Schema.define(version: 2018_07_10_150455) do
     t.string "name"
     t.boolean "a_list"
     t.integer "paygrade"
+    t.string "wikipedia"
   end
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
     t.integer "actor_id"
+    t.string "clip"
   end
 
   create_table "directors", force: :cascade do |t|
     t.string "name"
     t.boolean "oscar_winner"
+    t.string "interview"
   end
 
   create_table "movie_actors", force: :cascade do |t|

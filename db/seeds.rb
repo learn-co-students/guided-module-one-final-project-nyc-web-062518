@@ -1,10 +1,10 @@
 require 'pry'
 
 
-steven_spielberg = Director.create(name:"Steven Spielberg")
-george_lucas = Director.create(name:"George Lucas")
-robert_zemeckis = Director.create(name:"Robert Zemeckis")
-frank_marshall = Director.create(name:"Frank Marshall")
+steven_spielberg = Director.create(name:"Steven Spielberg", interview:"https://www.youtube.com/watch?v=-96-lAfagow")
+george_lucas = Director.create(name:"George Lucas", interview: "https://www.youtube.com/watch?v=Mhd47kudxts")
+robert_zemeckis = Director.create(name:"Robert Zemeckis", interview: "https://www.youtube.com/watch?v=hwu7tDxyFy8")
+frank_marshall = Director.create(name:"Frank Marshall", interview: "https://www.youtube.com/watch?v=K-MOf3G28Lg")
 
 jurassic_park = Movie.create(title:"Jurassic Park", trailer: "https://www.youtube.com/watch?v=Bim7RtKXv90")
 a_new_hope = Movie.create(title:"Star Wars: A New Hope", trailer: "https://www.youtube.com/watch?v=1g3_CFmnU7k")
@@ -15,18 +15,18 @@ back_to_the_future_2 = Movie.create(title:"Back to the Future 2", trailer: "http
 jaws = Movie.create(title:"Jaws", trailer: "https://www.youtube.com/watch?v=U1fu_sA7XhE")
 arachnophobia = Movie.create(title:"Arachnophobia", trailer: "https://www.youtube.com/watch?v=4aQ6vg3JB2U")
 
-michael_j_fox = Actor.create(name:"Michael J Fox")
-carrie_fisher = Actor.create(name:"Carrie Fisher")
-harrison_ford = Actor.create(name:"Harrison Ford")
-mark_hamill = Actor.create(name:"Mark Hamill")
-christopher_lloyd = Actor.create(name:"Christopher Lloyd")
-roy_scheider = Actor.create(name:"Roy Scheider")
-robert_shaw = Actor.create(name:"Robert Shaw")
-john_goodman = Actor.create(name:"John Goodman")
-jeff_daniels = Actor.create(name:"Jeff Daniels")
-jeff_goldblum = Actor.create(name:"Jeff Goldblum")
-laura_dern = Actor.create(name:"Laura Dern")
-sam_neill = Actor.create(name:"Sam Neill")
+michael_j_fox = Actor.create(name:"Michael J Fox", wikipedia: "https://en.wikipedia.org/wiki/Michael_J._Fox")
+carrie_fisher = Actor.create(name:"Carrie Fisher", wikipedia: "https://en.wikipedia.org/wiki/Carrie_Fisher")
+harrison_ford = Actor.create(name:"Harrison Ford", wikipedia: "https://en.wikipedia.org/wiki/Harrison_Ford")
+mark_hamill = Actor.create(name:"Mark Hamill", wikipedia: "https://en.wikipedia.org/wiki/Mark_Hamill")
+christopher_lloyd = Actor.create(name:"Christopher Lloyd", wikipedia: "https://en.wikipedia.org/wiki/Christopher_Lloyd")
+roy_scheider = Actor.create(name:"Roy Scheider", wikipedia: "https://en.wikipedia.org/wiki/Roy_Scheider")
+robert_shaw = Actor.create(name:"Robert Shaw", wikipedia: "https://en.wikipedia.org/wiki/Robert_Shaw")
+john_goodman = Actor.create(name:"John Goodman", wikipedia: "https://en.wikipedia.org/wiki/John_Goodman")
+jeff_daniels = Actor.create(name:"Jeff Daniels", wikipedia: "https://en.wikipedia.org/wiki/Jeff_Daniels")
+jeff_goldblum = Actor.create(name:"Jeff Goldblum", wikipedia: "https://en.wikipedia.org/wiki/Jeff_Goldblum")
+laura_dern = Actor.create(name:"Laura Dern", wikipedia: "https://en.wikipedia.org/wiki/Laura_Dern")
+sam_neill = Actor.create(name:"Sam Neill", wikipedia: "https://en.wikipedia.org/wiki/Sam_Neill")
 
 mark_hamill.paygrade = 2
 mark_hamill.save
@@ -78,18 +78,18 @@ laura_dern.save
 sam_neill.a_list = false
 sam_neill.save
 
-luke_skywalker = Character.create(name:"Luke Skywalker", actor: mark_hamill)
-han_solo = Character.create(name:"Han Solo", actor: harrison_ford)
-princess_leia = Character.create(name:"Princess Leia", actor: carrie_fisher)
-marty = Character.create(name:"Marty", actor: michael_j_fox)
-doc = Character.create(name:"Doc", actor: christopher_lloyd)
-delbert = Character.create(name:"Delbert McClintock", actor: john_goodman)
-ross = Character.create(name: "Ross Jennings", actor: jeff_daniels)
-martin = Character.create(name: "Martin Brody", actor: roy_scheider)
-quint = Character.create(name: "Quint", actor: robert_shaw)
-ian = Character.create(name:"Ian Malcolm", actor: jeff_goldblum)
-ellie = Character.create(name:"Ellie Sattler", actor: laura_dern)
-alan = Character.create(name:"Alan Grant", actor: sam_neill)
+luke_skywalker = Character.create(name:"Luke Skywalker", actor: mark_hamill, clip:"https://www.youtube.com/watch?v=U1MnMA0TzGI")
+han_solo = Character.create(name:"Han Solo", actor: harrison_ford, clip:"https://www.youtube.com/watch?v=g6PDcBhODqo")
+princess_leia = Character.create(name:"Princess Leia", actor: carrie_fisher, clip:"https://www.youtube.com/watch?v=MDYX_PgorRY")
+marty = Character.create(name:"Marty", actor: michael_j_fox, clip:"https://www.youtube.com/watch?v=S1i5coU-0_Q")
+doc = Character.create(name:"Doc", actor: christopher_lloyd, clip:"https://www.youtube.com/watch?v=SR5BfQ4rEqQ")
+delbert = Character.create(name:"Delbert McClintock", actor: john_goodman, clip:"https://www.youtube.com/watch?v=OfJJaPRmysA")
+ross = Character.create(name: "Ross Jennings", actor: jeff_daniels, clip:"https://www.youtube.com/watch?v=utUPX6CRtag")
+martin = Character.create(name: "Martin Brody", actor: roy_scheider, clip:"https://www.youtube.com/watch?v=N92pfxjHXkg")
+quint = Character.create(name: "Quint", actor: robert_shaw, clip:"https://www.youtube.com/watch?v=dPi40lQetew")
+ian = Character.create(name:"Ian Malcolm", actor: jeff_goldblum, clip:"https://www.youtube.com/watch?v=4PLvdmifDSk")
+ellie = Character.create(name:"Ellie Sattler", actor: laura_dern, clip:"https://www.youtube.com/watch?v=0fAGxs7QYF8")
+alan = Character.create(name:"Alan Grant", actor: sam_neill, clip:"https://www.youtube.com/watch?v=PJlmYh27MHg")
 
 MovieCharacter.create(movie: jurassic_park, character: ian)
 MovieCharacter.create(movie: jurassic_park, character: ellie)

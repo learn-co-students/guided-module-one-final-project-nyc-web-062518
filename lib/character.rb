@@ -19,8 +19,14 @@ class Character < ActiveRecord::Base
       self.character_movies
     elsif input == "2"
       self.portrayed_by
+    elsif input == "3"
+      self.character_clip
     else
       puts "Please select a valid option by number.".colorize(:red)
     end
+  end
+
+  def character_clip
+    Launchy.open(self.clip)
   end
 end

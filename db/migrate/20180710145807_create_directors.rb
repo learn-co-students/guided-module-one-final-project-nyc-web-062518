@@ -3,6 +3,7 @@ class CreateDirectors < ActiveRecord::Migration[5.0]
     create_table :directors do |t|
       t.string :name
       t.boolean :oscar_winner
+      t.string :interview
     end
   end
 end
