@@ -47,8 +47,14 @@ class Director < ActiveRecord::Base
       self.oscar
     elsif input == "5"
       self.open_interview
+    elsif input == "6"
+      cli = CLIapp.new
+      cli.welcome_message
     else
       puts "Enter valid choice by number.".colorize(:red)
     end
+
   end
+
+
 end
