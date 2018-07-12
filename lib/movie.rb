@@ -23,6 +23,9 @@ class Movie < ActiveRecord::Base
         cast
       elsif input == "4"
         Launchy.open(self.trailer)
+      elsif input == "5"
+        cli = CLIapp.new
+        cli.welcome_message
       end
     end
 end

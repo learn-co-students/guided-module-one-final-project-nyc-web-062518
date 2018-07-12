@@ -21,6 +21,9 @@ class Character < ActiveRecord::Base
       self.portrayed_by
     elsif input == "3"
       self.character_clip
+    elsif input == "4"
+      cli = CLIapp.new
+      cli.welcome_message
     else
       puts "Please select a valid option by number.".colorize(:red)
     end

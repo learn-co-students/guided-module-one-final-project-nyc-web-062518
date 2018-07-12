@@ -42,6 +42,9 @@ class Actor < ActiveRecord::Base
       self.actor_characters
     elsif choice == "4"
       self.actor_wikipedia
+    elsif choice == "5"
+      cli = CLIapp.new
+      cli.welcome_message
     end
   end
 
