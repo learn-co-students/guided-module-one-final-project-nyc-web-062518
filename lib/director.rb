@@ -1,3 +1,5 @@
+old_logger = ActiveRecord::Base.logger
+ActiveRecord::Base.logger = nil
 class Director < ActiveRecord::Base
   has_many :movies
   has_many :actors, through: :movies
@@ -11,8 +13,12 @@ class Director < ActiveRecord::Base
 
   def director_actors
     puts "#{self.name} has worked with:"
-    self.actors.each do |actor|
-      puts actor.name
+    first_array = self.actors.collect do |actor|
+      actor.name
+    end
+    final_array = first_array.uniq
+    final_array.each do |actor|
+      puts actor
     end
   end
 

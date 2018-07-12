@@ -1,3 +1,5 @@
+old_logger = ActiveRecord::Base.logger
+ActiveRecord::Base.logger = nil
 class Movie < ActiveRecord::Base
     belongs_to :director
     has_many :movie_characters
